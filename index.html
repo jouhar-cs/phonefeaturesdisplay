@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>website design using html and css</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="iphone.png" alt="image">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">phone</a></li>
+                        <li><a href="#">accessories</a></li>
+                        <li><a href="#">cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay">
+                </div>
+                <img src="apple.jpg" alt="image" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="cam.jpg" alt="image">
+                        <div>
+                            <h1>Camera</h1>
+                            <p>12MP, Wide angle Lens</p>
+                            </div>
+                        </div>
+                        <div class="feature two">
+                            <img src="pro.jpg" alt="image">
+                            <div>
+                                <h1>Processor</h1>
+                                <p>Snapdragon Octa-core 11nm</p>
+                            </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="displayj.jpg" alt="image">
+                        <div>
+                            <h1>Display</h1>
+                            <p>6.5" Mini-Drop Fullscreen</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                    <img src="jpg.png" alt="image">
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                    </div>
+
+                </div>
+        </div>
+        <div class="controls">
+            <img src="uparrow.png" alt="image" id="upBtn">
+            <h3>Features</h3>
+            <img src="uparrow.png" alt="image" id="dawnBtn">
+        </div>
+            </div>
+
+            <script>
+                var circle = document.getElementById("circle")
+                var upBtn = document.getElementById("upBtn")
+                var dawnBtn = document.getElementById("dawnBtn")
+
+                var rotateValue = circle.style.transform;
+                var rotateSum;
+
+
+                upBtn.onclick = function(){
+                    rotateSum = rotateValue + "rotate(-90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;  
+                }
+                dawnBtn.onclick = function(){
+                    rotateSum = rotateValue + "rotate(90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;  
+                }
+            </script>
+</body>       
+</html>
